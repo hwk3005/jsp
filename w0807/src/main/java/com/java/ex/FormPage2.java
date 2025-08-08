@@ -15,13 +15,10 @@ public class FormPage2 extends HttpServlet {
 	protected void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("doAction 실행");
 		String name = request.getParameter("name");
-		String kor = request.getParameter("kor");
-		String eng = request.getParameter("eng");
-		String math = request.getParameter("math");
-		int kor2 = Integer.parseInt(kor);
-		int eng2 = Integer.parseInt(eng);
-		int math2 = Integer.parseInt(math);
-		int total = kor2 + eng2 + math2;
+		int kor = Integer.parseInt(request.getParameter("kor"));
+		int eng = Integer.parseInt(request.getParameter("eng"));
+		int math = Integer.parseInt(request.getParameter("math"));
+		int total = kor + eng + math;
 		double avg = total/3.0;
 		System.out.println("name: "+name);
 		System.out.println("kor: "+kor);
